@@ -21,16 +21,21 @@ fn main() -> io::Result<()> {
         let value = line
             .parse::<u64>()
             .expect("Failed to parse line as an integer");
-            current_elf += value;
-
+        current_elf += value;
     }
 
     // Sort descending
     elves.sort_by(|a, b| b.cmp(a));
 
-    println!("The elf with the most calories is carrying {} calories", &elves[0]);
+    println!(
+        "The elf with the most calories is carrying {} calories",
+        &elves[0]
+    );
 
-    println!("The top 3 elves are carring {} calories", &elves[0] + &elves[1] + &elves[2]);
+    println!(
+        "The top 3 elves are carring {} calories",
+        elves[0] + elves[1] + elves[2]
+    );
 
     Ok(())
 }
