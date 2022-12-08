@@ -11,7 +11,7 @@ fn main() -> io::Result<()> {
     for line in reader.lines() {
         let line = line.unwrap();
 
-        let mut split_parts = line.split(" ");
+        let mut split_parts = line.split(' ');
         let opponent_code = split_parts.next().unwrap();
         let player_code = split_parts.next().unwrap();
 
@@ -83,7 +83,5 @@ fn calculate_score(opponent: &str, player: &str) -> i32 {
         _ => 0
     };
 
-    let round_score = outcome_score + shape_score;
-
-    return round_score;
+    outcome_score + shape_score
 }
