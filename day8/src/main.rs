@@ -30,9 +30,6 @@ fn main() -> color_eyre::Result<()> {
     }
 
     println!("part 1: {}", visible_trees);
-    //21
-    //1690
-    //535680
 
     // Part 2
     let mut scenic_scores: Vec<u32> = Vec::new();
